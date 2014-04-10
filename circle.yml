@@ -14,4 +14,4 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - bundle exec rake
+    - bundle exec rake test:unit test:integration
