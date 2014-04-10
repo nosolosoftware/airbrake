@@ -302,10 +302,6 @@ module Airbrake
       @js_api_key || self.api_key
     end
 
-    def js_notifier=(*args)
-      warn '[AIRBRAKE] config.js_notifier has been deprecated and has no effect.  You should use <%= airbrake_javascript_notifier %> directly at the top of your layouts.  Be sure to place it before all other javascript.'
-    end
-
     def ca_bundle_path
       if use_system_ssl_cert_chain? && File.exist?(OpenSSL::X509::DEFAULT_CERT_FILE)
         OpenSSL::X509::DEFAULT_CERT_FILE
