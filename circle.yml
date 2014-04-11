@@ -9,9 +9,9 @@ dependencies:
 
   override:
     - bundle install -j10
-    - bundle exec rake appraisal:install
+    - bundle exec appraisal install
 
 ## Customize test commands
 test:
   override:
-    - bundle exec rake test:unit test:integration
+    - bundle exec rake test:integration
