@@ -31,7 +31,7 @@ def reload_rack_filters
   original_filters = File.read(ORIGINAL_RACK_FILTERS)
 
   File.write(File.join(TEMP_DIR, "rack_filters.rb"), 
-             original_filters.lines[1..-2].join("\n"))
+             original_filters.lines.to_a[1..-2].join("\n"))
 
   require File.join(TEMP_DIR, "rack_filters.rb")
 end
