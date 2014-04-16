@@ -11,7 +11,7 @@ module Airbrake
 
         def airbrake_javascript_notifier
           if Airbrake.configuration.public?
-            airbrake_javascript_loader + airbrake_javascript_configuration
+            airbrake_javascript_configuration
           end
         end
 
